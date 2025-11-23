@@ -1,0 +1,55 @@
+name: remindy
+description: "Aplikasi to-do list dengan fitur notifikasi reminder yang berjalan offline."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 1. State Management
+  provider: ^6.0.5
+
+  # 2. Database Lokal (SQLite)
+  sqflite: ^2.3.0
+  path: ^1.8.3
+
+  # 3. Notifikasi (Local Reminder)
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.2
+  flutter_timezone: ^3.0.1
+  permission_handler: ^11.3.0
+
+  # 4. Grafik Statistik
+  fl_chart: ^0.65.0
+
+  # 5. Utilitas Lain
+  shared_preferences: ^2.2.2
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Linter & Icon Generator
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  # Aset Gambar (Opsional: aktifkan jika ingin menampilkan logo di dalam UI aplikasi)
+  # assets:
+  #   - assets/icon/
+
+# Konfigurasi Icon Aplikasi
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#1F1F1F"
+  adaptive_icon_foreground: "assets/icon/icon.png"
